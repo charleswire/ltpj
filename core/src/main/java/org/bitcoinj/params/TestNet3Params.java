@@ -70,7 +70,7 @@ public class TestNet3Params extends AbstractBitcoinNetParams {
         alertSigningKey = HEX.decode(CoinDefinition.TESTNET_SATOSHI_KEY);
 
         dnsSeeds = new String[] {
-                "testnet-seed.dashdot.io"
+                "testnet-seed.lifetioncoin.org"
         };
 
         bip32HeaderP2PKHpub = 0x043587cf; // The 4 byte header that serializes in base58 to "tpub".
