@@ -3,6 +3,7 @@
 > A Java library for working with LifetionCoin
 
 [![Build Status](https://travis-ci.com/lifetioncoin/ltpj.svg?token=Pzix7aqnMuGS9c6BmBz2&branch=master)](https://travis-ci.com/lifetioncoin/ltpj)
+[![jitpack](https://jitpack.io/v/lifetioncoin/ltpj.svg)](https://jitpack.io/#lifetioncoin/ltpj)
 
 ### Welcome to ltpj
 
