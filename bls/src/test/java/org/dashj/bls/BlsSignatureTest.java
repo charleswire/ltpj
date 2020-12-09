@@ -1,4 +1,4 @@
-package org.dashj.bls;
+package org.ltpj.bls;
 
 import com.google.common.io.BaseEncoding;
 import org.junit.Test;
@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Random;
 
-import static org.dashj.bls.BLS.STS_OK;
+import static org.ltpj.bls.BLS.STS_OK;
 import static org.junit.Assert.*;
 
 public class BlsSignatureTest extends BaseTest {

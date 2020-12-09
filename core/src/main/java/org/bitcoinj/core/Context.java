@@ -27,7 +27,7 @@ import org.bitcoinj.governance.VoteConfidenceTable;
 import org.bitcoinj.quorums.*;
 import org.bitcoinj.store.FlatDB;
 import org.bitcoinj.store.HashStore;
-import org.dashj.bls.BLS;
+import org.ltpj.bls.BLS;
 import org.bitcoinj.wallet.SendRequest;
 import org.slf4j.*;
 
@@ -147,7 +147,7 @@ public class Context {
             if (lastConstructed == null)
                 throw new IllegalStateException("You must construct a Context object before using bitcoinj!");
             slot.set(lastConstructed);
-            log.error("Performing thread fixup: you are accessing dashj via a thread that has not had any context set on it.");
+            log.error("Performing thread fixup: you are accessing ltpj via a thread that has not had any context set on it.");
             log.error("This error has been corrected for, but doing this makes your app less robust.");
             log.error("You should use Context.propagate() or a ContextPropagatingThreadFactory.");
             log.error("Please refer to the user guide for more information about this.");

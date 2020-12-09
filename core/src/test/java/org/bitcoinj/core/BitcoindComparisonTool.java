@@ -33,8 +33,8 @@ import java.util.*;
 import java.util.concurrent.atomic.*;
 
 /**
- * A tool for comparing the blocks which are accepted/rejected by dashd/dashj
- * It is designed to run as a testnet-in-a-box network between a single dashd node and dashj
+ * A tool for comparing the blocks which are accepted/rejected by dashd/ltpj
+ * It is designed to run as a testnet-in-a-box network between a single dashd node and ltpj
  * It is not an automated unit-test because it requires a bit more set-up...read comments below
  */
 public class BitcoindComparisonTool {

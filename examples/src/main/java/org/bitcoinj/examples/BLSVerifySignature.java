@@ -23,7 +23,7 @@ import org.bitcoinj.core.Sha256Hash;
 import org.bitcoinj.crypto.BLSPublicKey;
 import org.bitcoinj.crypto.BLSSecretKey;
 import org.bitcoinj.crypto.BLSSignature;
-import org.dashj.bls.*;
+import org.ltpj.bls.*;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;

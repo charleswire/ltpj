@@ -231,7 +231,7 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
     { SWIG_JavaNullPointerException, "java/lang/NullPointerException" },
     { SWIG_JavaDirectorPureVirtual, "java/lang/RuntimeException" },
     { SWIG_JavaUnknownError,  "java/lang/UnknownError" },
-    { DashJ_JavaBLSException, "org/dashj/bls/BLSException"},
+    { DashJ_JavaBLSException, "org/ltpj/bls/BLSException"},
     { (SWIG_JavaExceptionCodes)0,  "java/lang/UnknownError" }
   };
   const SWIG_JavaExceptions_t *except_ptr = java_exceptions;
@@ -688,7 +688,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_BLS_1SetContextError(JNIEnv *jenv
   core_get()->code = error;
 }
 
-std::string DASHJ_VERSION = "0.18-SNAPSHOT";
+std::string DASHJ_VERSION = "1.0.0-SNAPSHOT";
 
 SWIGEXPORT jstring JNICALL Java_org_dashj_bls_JNI_BLS_1GetVersionString(JNIEnv *jenv, jclass jcls) {
   (void)jenv;

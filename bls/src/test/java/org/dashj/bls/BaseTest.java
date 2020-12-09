@@ -1,4 +1,4 @@
-package org.dashj.bls;
+package org.ltpj.bls;
 
 /**
  * Created by hashengineering on 11/13/18.

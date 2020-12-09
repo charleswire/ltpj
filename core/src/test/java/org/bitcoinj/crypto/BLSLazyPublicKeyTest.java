@@ -3,9 +3,9 @@ package org.bitcoinj.crypto;
 import org.bitcoinj.core.Context;
 import org.bitcoinj.core.NetworkParameters;
 import org.bitcoinj.params.MainNetParams;
-import org.dashj.bls.BLS;
-import org.dashj.bls.PrivateKey;
-import org.dashj.bls.PublicKey;
+import org.ltpj.bls.BLS;
+import org.ltpj.bls.PrivateKey;
+import org.ltpj.bls.PublicKey;
 import org.junit.Test;
 
 import java.math.BigInteger;

@@ -80,7 +80,7 @@ public class CreditFundingTransactionTest {
 
 
     /*
-    from dashj:
+    from ltpj:
     -----------
     -0.00040224 DASH total value (sends 0.01 DASH and receives 0.00959776 DASH)
       a8abd4337d4906041324f1c9f713342112c0d24655fd295a57fe3563ac969896

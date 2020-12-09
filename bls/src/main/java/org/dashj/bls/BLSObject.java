@@ -15,7 +15,7 @@
  *
  */
 
-package org.dashj.bls;
+package org.ltpj.bls;
 
 import com.google.common.base.Preconditions;
 

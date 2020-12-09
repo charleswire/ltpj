@@ -20,14 +20,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.dashj</groupId>
-        <artifactId>dashj-parent</artifactId>
-        <version>0.18-SNAPSHOT</version>
+        <groupId>org.ltpj</groupId>
+        <artifactId>ltpj-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>dashj-core</artifactId>
+    <artifactId>ltpj-core</artifactId>
 
-    <name>dashj</name>
+    <name>ltpj</name>
     <description>A Java Dash library</description>
 
     <packaging>jar</packaging>
@@ -341,7 +341,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Coveralls is a online code coverage tool, you can track code coverage here: https://coveralls.io/r/dashevo/dashj -->
+            <!-- Coveralls is a online code coverage tool, you can track code coverage here: https://coveralls.io/r/dashevo/ltpj -->
             <plugin>
                 <groupId>org.eluder.coveralls</groupId>
                 <artifactId>coveralls-maven-plugin</artifactId>
@@ -352,9 +352,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.dashj</groupId>
-            <artifactId>dashj-bls</artifactId>
-            <version>0.18-SNAPSHOT</version>
+            <groupId>org.ltpj</groupId>
+            <artifactId>ltpj-bls</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>de.sfuhrm</groupId>
@@ -373,7 +373,7 @@
             <version>3.2</version>
             <scope>test</scope>
         </dependency>
-        <!-- dashj consumers are expected to provide their own SLF4J adapters
+        <!-- ltpj consumers are expected to provide their own SLF4J adapters
              such as logback, slf4j-log4j12, slf4j-jcl and so on
              see http://www.slf4j.org/faq.html -->
         <dependency>

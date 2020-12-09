@@ -3,9 +3,9 @@ package org.bitcoinj.crypto;
 import com.google.common.base.Preconditions;
 import org.bitcoinj.core.NetworkParameters;
 import org.bitcoinj.core.ProtocolException;
-import org.dashj.bls.BLS;
-import org.dashj.bls.PublicKey;
-import org.dashj.bls.PublicKeyVector;
+import org.ltpj.bls.BLS;
+import org.ltpj.bls.PublicKey;
+import org.ltpj.bls.PublicKeyVector;
 
 import java.io.IOException;
 import java.io.OutputStream;

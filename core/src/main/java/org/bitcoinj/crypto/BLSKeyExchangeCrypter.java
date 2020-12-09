@@ -26,8 +26,8 @@ import org.bouncycastle.crypto.modes.CBCBlockCipher;
 import org.bouncycastle.crypto.paddings.PaddedBufferedBlockCipher;
 import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.crypto.params.ParametersWithIV;
-import org.dashj.bls.BLS;
-import org.dashj.bls.PublicKey;
+import org.ltpj.bls.BLS;
+import org.ltpj.bls.PublicKey;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

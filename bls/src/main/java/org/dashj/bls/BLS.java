@@ -17,7 +17,7 @@
  * Version 3.0.12
  */
 
-package org.dashj.bls;
+package org.ltpj.bls;
 
 import com.google.common.base.Preconditions;
 
@@ -25,7 +25,7 @@ public class BLS {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
-  public static final String DASHJ_VERSION = "0.18-SNAPSHOT";
+  public static final String DASHJ_VERSION = "1.0.0-SNAPSHOT";
 
 
   static {
@@ -34,7 +34,7 @@ public class BLS {
     {
       System.loadLibrary(JNI.LIBRARY_NAME);
       Preconditions.checkState(GetVersionString().equals(DASHJ_VERSION),
-              "dashjbls:  C++ Source Version doesn't match Java Source version:" +
+              "ltpjbls:  C++ Source Version doesn't match Java Source version:" +
               "C++: " + GetVersionString() + " Java: " + DASHJ_VERSION);
       isLibraryLoaded = true;
     } catch(UnsatisfiedLinkError x) {
