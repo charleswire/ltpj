@@ -1,12 +1,12 @@
-# dashj
+# ltpj
 
-> A Java library for working with Dash
+> A Java library for working with LifetionCoin
 
-[![Build Status](https://travis-ci.com/dashevo/dashj.svg?token=Pzix7aqnMuGS9c6BmBz2&branch=master)](https://travis-ci.com/dashevo/dashj)
+[![Build Status](https://travis-ci.com/lifetioncoin/ltpj.svg?token=Pzix7aqnMuGS9c6BmBz2&branch=master)](https://travis-ci.com/lifetioncoin/ltpj)
 
-### Welcome to dashj
+### Welcome to ltpj
 
-The dashj library is a Java implementation of the Dash protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of Dash Core. It comes with full documentation and some example apps showing how to use it.
+The ltpj library is a Java implementation of the LifetionCoin protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of LifetionCoin Core. It comes with full documentation and some example apps showing how to use it.
 
 ### Technologies
 
@@ -23,7 +23,7 @@ To initialize the repo after cloning it:
 ```
 git submodule update  --init --recursive
 ```
-To perform a full build use (this includes the dashjbls shared library):
+To perform a full build use (this includes the ltpjbls shared library):
 ```
 mvn clean package
 ```
@@ -47,7 +47,7 @@ The outputs are under the `target` directory.
 
 Alternatively, just import the project using your IDE. [IntelliJ](http://www.jetbrains.com/idea/download/) has Maven integration built-in and has a free Community Edition. Simply use `File | Import Project` and locate the `pom.xml` in the root of the cloned project source tree.
 
-The dashjbls library must still be built with `mvn`.
+The ltpjbls library must still be built with `mvn`.
 
 ### Example applications
 
@@ -55,4 +55,4 @@ These are found in the `examples` module.
 
 ### Where next?
 
-Now you are ready to [follow the tutorial](https://bitcoinj.github.io/getting-started).  Though this is for bitcoinj, there is no equivalent site for dashj.
+Now you are ready to [follow the tutorial](https://bitcoinj.github.io/getting-started).  Though this is for bitcoinj, there is no equivalent site for ltpj.
