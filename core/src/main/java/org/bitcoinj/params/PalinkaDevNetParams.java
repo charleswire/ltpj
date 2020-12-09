@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Dash Core Group
+ * Copyright 2020 LifetionCoin Core Group
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,7 +39,7 @@ public class PalinkaDevNetParams extends DevNetParams {
     public PalinkaDevNetParams() {
         super(DEVNET_NAME, "yMtULrhoxd8vRZrsnFobWgRTidtjg2Rnjm", 20001,
                 MASTERNODES, true, 70215);
-        dnsSeeds = new String[] { "seed-1.palinka.networks.dash.org" };
+        dnsSeeds = new String[] { "seed-1.palinka.networks.lifetioncoin.org" };
     }
 
     private static PalinkaDevNetParams instance;

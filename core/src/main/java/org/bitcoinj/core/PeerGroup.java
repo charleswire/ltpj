@@ -94,7 +94,7 @@ public class PeerGroup implements TransactionBroadcaster, GovernanceVoteBroadcas
 
     protected final ReentrantLock lock = Threading.lock("peergroup");
 
-    public ReentrantLock getLock() { return lock; }  //for dash
+    public ReentrantLock getLock() { return lock; }  //for lifetioncoin
 
     protected final NetworkParameters params;
     protected final Context context;

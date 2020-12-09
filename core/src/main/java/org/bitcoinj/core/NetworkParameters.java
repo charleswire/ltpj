@@ -59,7 +59,7 @@ public abstract class NetworkParameters {
 
     public static final String ID_TESTNET = CoinDefinition.ID_TESTNET; //"org.bitcoin.test";
     /** The string returned by getId() for the devnet. */
-    public static final String ID_DEVNET = "org.dash.dev";
+    public static final String ID_DEVNET = "org.lifetioncoin.dev";
     /** Unit test network. */
     public static final String ID_UNITTESTNET = CoinDefinition.ID_UNITTESTNET; //"com.google.bitcoin.unittest";
     /** The string returned by getId() for regtest mode. */
@@ -141,7 +141,7 @@ public abstract class NetworkParameters {
 
 
 
-    //Dash Extra Parameters
+    //LifetionCoin Extra Parameters
     protected String strSporkAddress;
     String strMasternodePaymentsPubKey;
     String strDarksendPoolDummyAddress;
@@ -377,7 +377,7 @@ public abstract class NetworkParameters {
     /**
      * <p>DevNet Genesis block for this chain.</p>
      *
-     * <p>The second block in a devnet chain is a known constant shared between all Dash DevNet implimentations for a
+     * <p>The second block in a devnet chain is a known constant shared between all LifetionCoin DevNet implimentations for a
      * particular devnetname. For a block to be valid, it must be eventually possible to work backwards to the devnet block
      * and to the genesis block by following the prevBlockHash pointers in the block headers.</p>
      */

@@ -155,7 +155,7 @@ public class DarkSendPool {
             oneThread = true;
             // Make this thread recognisable as the wallet flushing thread
 
-            log.info("--------------------------------------\nstarting dash-darksend thread");
+            log.info("--------------------------------------\nstarting lifetioncoin-darksend thread");
             int tick = 0;
             try {
 
@@ -202,19 +202,19 @@ public class DarkSendPool {
 
     Thread backgroundThread;
     ThreadCheckDarkSendPool threadCheckDarkSendPool = null;
-    //dash
+    //lifetioncoin
     public boolean startBackgroundProcessing()
     {
         if(backgroundThread == null)
         {
             threadCheckDarkSendPool = new ThreadCheckDarkSendPool();
-            backgroundThread = new ContextPropagatingThreadFactory("dash-privatesend").newThread(threadCheckDarkSendPool);
+            backgroundThread = new ContextPropagatingThreadFactory("lifetioncoin-privatesend").newThread(threadCheckDarkSendPool);
             backgroundThread.start();
             return true;
         }
         else if(backgroundThread.getState() == Thread.State.TERMINATED) {
             //if the thread was stopped, start it again
-            backgroundThread = new ContextPropagatingThreadFactory("dash-privatesend").newThread(threadCheckDarkSendPool);
+            backgroundThread = new ContextPropagatingThreadFactory("lifetioncoin-privatesend").newThread(threadCheckDarkSendPool);
             backgroundThread.start();
         }
         return false;

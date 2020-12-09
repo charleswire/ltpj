@@ -236,7 +236,7 @@ public class Address extends AbstractAddress {
         return getHash();
     }
 
-    /** The (big endian) 20 byte hash that is the core of a Dash address. */
+    /** The (big endian) 20 byte hash that is the core of a LifetionCoin address. */
     @Override
     public byte[] getHash() {
         return bytes;

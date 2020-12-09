@@ -74,7 +74,7 @@
 
     <repository>
       <id>central</id>
-      <name>dash-LTPj</name>
+      <name>ltp-LTPj</name>
       <url>https://api.bintray.com/maven/lifetioncoin/ltpj/org.ltpj/;publish=1</url>
     </repository>
 

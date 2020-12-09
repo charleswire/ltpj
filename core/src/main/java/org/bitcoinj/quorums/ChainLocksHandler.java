@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Dash Core Group
+ * Copyright 2019 LifetionCoin Core Group
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -85,7 +85,7 @@ public class ChainLocksHandler extends AbstractManager implements RecoveredSigna
 
     @Override
     public void onNewRecoveredSignature(RecoveredSignature recoveredSig) {
-        //do nothing.  In Dash Core, this handles signing CLSIG's
+        //do nothing.  In LifetionCoin Core, this handles signing CLSIG's
     }
 
     public void start()

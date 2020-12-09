@@ -87,7 +87,7 @@ public class BLSPublicKey extends BLSAbstractObject {
 
         return result;
     }
-    /* Dash Core only
+    /* LifetionCoin Core only
     public boolean publicKeyShare(ArrayList<BLSPublicKey> mpk, BLSId id) {
         valid = false;
         updateHash();

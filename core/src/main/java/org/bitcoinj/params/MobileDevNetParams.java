@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Dash Core Group
+ * Copyright 2020 LifetionCoin Core Group
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,11 +21,11 @@ public class MobileDevNetParams extends DevNetParams {
     private static String DEVNET_NAME = "mobile-2";
 
     public static String[] DNS_SEEDERS = new String[]{
-            "seed-1.mobile.networks.dash.org",
-            "seed-2.mobile.networks.dash.org",
-            "seed-3.mobile.networks.dash.org",
-            "seed-4.mobile.networks.dash.org",
-            "seed-5.mobile.networks.dash.org"
+            "seed-1.mobile.networks.lifetioncoin.org",
+            "seed-2.mobile.networks.lifetioncoin.org",
+            "seed-3.mobile.networks.lifetioncoin.org",
+            "seed-4.mobile.networks.lifetioncoin.org",
+            "seed-5.mobile.networks.lifetioncoin.org"
     };
 
     public static String[] MASTERNODES = new String[]{

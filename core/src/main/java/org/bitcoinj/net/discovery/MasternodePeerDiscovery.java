@@ -58,7 +58,7 @@ public class MasternodePeerDiscovery implements PeerDiscovery {
     }
 
     /**
-     * Returns an array containing all the Dash nodes within the list.
+     * Returns an array containing all the LifetionCoin nodes within the list.
      */
     @Override
     public InetSocketAddress[] getPeers(long services, long timeoutValue, TimeUnit timeoutUnit) throws PeerDiscoveryException {

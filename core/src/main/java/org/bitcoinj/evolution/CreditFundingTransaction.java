@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Dash Core Group
+ * Copyright 2020 LifetionCoin Core Group
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -62,7 +62,7 @@ public class CreditFundingTransaction extends Transaction {
      * Creates a credit funding transaction.
      * @param params
      * @param creditBurnKey The key from which the hash160 will be placed in the OP_RETURN output
-     * @param fundingAmount The amount of dash that will be locked in the OP_RETURN output
+     * @param fundingAmount The amount of lifetioncoin that will be locked in the OP_RETURN output
      */
     public CreditFundingTransaction(NetworkParameters params, ECKey creditBurnKey, Coin fundingAmount) {
         super(params);

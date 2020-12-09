@@ -28,7 +28,7 @@
     <artifactId>ltpj-core</artifactId>
 
     <name>ltpj</name>
-    <description>A Java Dash library</description>
+    <description>A Java LifetionCoin library</description>
 
     <packaging>jar</packaging>
 

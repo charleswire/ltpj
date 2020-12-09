@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Dash Core Group
+ * Copyright 2018 LifetionCoin Core Group
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -78,7 +78,7 @@ public class BLS {
     JNI.BLS_HashPubKeys(SWIGTYPE_p_bn_t.getCPtr(output), numOutputs, MessageHashVector.getCPtr(serPubKeys), serPubKeys, SWIGTYPE_p_std__vectorT_size_t_t.getCPtr(sortedIndices));
   }
 
-  /*  Dash Core Only
+  /*  LifetionCoin Core Only
   public static PrivateKey PrivateKeyShare(PrivateKeyVector sks, byte [] id) {
     return new PrivateKey(JNI.BLS_PrivateKeyShare(PrivateKeyVector.getCPtr(sks), id), true);
   }

@@ -1212,7 +1212,7 @@ public class Peer extends PeerSocketHandler {
                 if (awaitingFreshFilter != null) {
                     log.info("Discarding block {} because we're still waiting for a fresh filter", m.getHash());
                     // We must record the hashes of blocks we discard because you cannot do getblocks twice on the same
-                    // range of blocks and get an inv both times, due to the codepath in Dash Core hitting
+                    // range of blocks and get an inv both times, due to the codepath in LifetionCoin Core hitting
                     // CPeer::PushInventory() which checks CPeer::setInventoryKnown and thus deduplicates.
                     awaitingFreshFilter.add(m.getHash());
                     return;   // Chain download process is restarted via a call to setBloomFilter.
@@ -1321,7 +1321,7 @@ public class Peer extends PeerSocketHandler {
         }
     }
 
-    //added for dash
+    //added for lifetioncoin
     boolean alreadyHave(InventoryItem inv)
     {
         switch (inv.type)
@@ -1529,9 +1529,9 @@ public class Peer extends PeerSocketHandler {
                         // requesting a subset of what we already requested, which can lead to parallel chain downloads
                         // and other nastiness. So we just do a quick removal of redundant getdatas here too.
                         //
-                        // Note that as of June 2012 Dash Core won't actually ever interleave blocks pushed as
+                        // Note that as of June 2012 LifetionCoin Core won't actually ever interleave blocks pushed as
                         // part of chain download with newly announced blocks, so it should always be taken care of by
-                        // the duplicate check in blockChainDownloadLocked(). But Dash Core may change in future so
+                        // the duplicate check in blockChainDownloadLocked(). But LifetionCoin Core may change in future so
                         // it's better to be safe here.
                         if (!pendingBlockDownloads.contains(item.hash)) {
                             if (vPeerVersionMessage.isBloomFilteringSupported() && useFilteredBlocks) {
@@ -2250,7 +2250,7 @@ public class Peer extends PeerSocketHandler {
     }
 
     //
-    //Dash Specific Code
+    //LifetionCoin Specific Code
     //
     public void notifyLock(Transaction tx)
     {

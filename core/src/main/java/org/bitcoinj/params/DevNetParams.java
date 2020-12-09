@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Dash Core Group
+ * Copyright 2020 LifetionCoin Core Group
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,8 +32,8 @@ import static com.google.common.base.Preconditions.checkState;
 import static org.bitcoinj.core.Utils.HEX;
 
 /**
- * Parameters for a named devnet, a separate instance of Dash that has relaxed rules suitable for development
- * and testing of applications and new Dash versions.  The name of the devnet is used to generate the
+ * Parameters for a named devnet, a separate instance of LifetionCoin that has relaxed rules suitable for development
+ * and testing of applications and new LifetionCoin versions.  The name of the devnet is used to generate the
  * second block of the blockchain.
  */
 public class DevNetParams extends AbstractBitcoinNetParams {

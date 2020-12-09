@@ -157,7 +157,7 @@ public class Script {
     /** Returns the serialized program as a newly created byte array. */
     public byte[] getProgram() {
         try {
-            // Don't round-trip as Dash Core doesn't and it would introduce a mismatch.
+            // Don't round-trip as LifetionCoin Core doesn't and it would introduce a mismatch.
             if (program != null)
                 return Arrays.copyOf(program, program.length);
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -190,7 +190,7 @@ public class Script {
      * <p>The reason for this split, instead of just interpreting directly, is to make it easier
      * to reach into a programs structure and pull out bits of data without having to run it.
      * This is necessary to render the to addresses of transactions in a user interface.
-     * Dash Core does something similar.</p>
+     * LifetionCoin Core does something similar.</p>
      */
     private void parse(byte[] program) throws ScriptException {
         chunks = new ArrayList<>(5);   // Common size.
@@ -685,7 +685,7 @@ public class Script {
     private static boolean castToBool(byte[] data) {
         for (int i = 0; i < data.length; i++)
         {
-            // "Can be negative zero" - Dash Core (see OpenSSL's BN_bn2mpi)
+            // "Can be negative zero" - LifetionCoin Core (see OpenSSL's BN_bn2mpi)
             if (data[i] != 0)
                 return !(i == data.length - 1 && (data[i] & 0xFF) == 0x80);
         }
@@ -1283,7 +1283,7 @@ public class Script {
             throw new ScriptException(ScriptError.SCRIPT_ERR_UNBALANCED_CONDITIONAL, "OP_IF/OP_NOTIF without OP_ENDIF");
     }
 
-    // This is more or less a direct translation of the code in Dash Core
+    // This is more or less a direct translation of the code in LifetionCoin Core
     private static void executeCheckLockTimeVerify(Transaction txContainingThis, int index, LinkedList<byte[]> stack, Set<VerifyFlag> verifyFlags) throws ScriptException {
         if (stack.size() < 1)
             throw new ScriptException(ScriptError.SCRIPT_ERR_INVALID_STACK_OPERATION, "Attempted OP_CHECKLOCKTIMEVERIFY on a stack with size < 1");
@@ -1512,7 +1512,7 @@ public class Script {
             }
         }
 
-        // We uselessly remove a stack object to emulate a Dash Core bug.
+        // We uselessly remove a stack object to emulate a LifetionCoin Core bug.
         byte[] nullDummy = stack.pollLast();
         if (verifyFlags.contains(VerifyFlag.NULLDUMMY) && nullDummy.length > 0)
             throw new ScriptException(ScriptError.SCRIPT_ERR_SIG_NULLFAIL, "OP_CHECKMULTISIG(VERIFY) with non-null nulldummy: " + Arrays.toString(nullDummy));

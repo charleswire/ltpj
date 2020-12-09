@@ -24,7 +24,7 @@ public class CoinDefinition {
     }
     public static final CoinPrecision coinPrecision = CoinPrecision.Coins;
 
-    public static final String UNSPENT_API_URL = "https://chainz.cryptoid.info/dash/api.dws?q=unspent";
+    public static final String UNSPENT_API_URL = "https://chainz.cryptoid.info/lifetioncoin/api.dws?q=unspent";
     public enum UnspentAPIType {
         BitEasy,
         Blockr,
@@ -75,7 +75,7 @@ public class CoinDefinition {
     public static final boolean feeCanBeRaised = false;
 
     //
-    // Dash 0.12.1.x
+    // LifetionCoin 0.12.1.x
     //
     public static final int PROTOCOL_VERSION = 70208;          //version.h PROTOCOL_VERSION
     public static final int MIN_PROTOCOL_VERSION = 70209;        //version.h MIN_PROTO_VERSION

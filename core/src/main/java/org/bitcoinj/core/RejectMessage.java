@@ -45,7 +45,7 @@ public class RejectMessage extends Message {
         DUPLICATE((byte) 0x12),
         /**
          * The message described an object was not standard and was thus not accepted.
-         * Dash Core has a concept of standard transaction forms, which describe scripts and encodings which
+         * LifetionCoin Core has a concept of standard transaction forms, which describe scripts and encodings which
          * it is willing to relay further. Other transactions are neither relayed nor mined, though they are considered
          * valid if they appear in a block.
          */

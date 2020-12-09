@@ -67,7 +67,7 @@ public class Context {
     final private boolean ensureMinRequiredFee;
     final private Coin feePerKb;
 
-    //Dash Specific
+    //LifetionCoin Specific
     private boolean liteMode = true;
     private boolean allowInstantX = true; //allow InstantX in litemode
     public PeerGroup peerGroup;
@@ -223,7 +223,7 @@ public class Context {
     }
 
     //
-    // Dash Specific
+    // LifetionCoin Specific
     //
     private boolean initializedDash = false;
 
@@ -244,7 +244,7 @@ public class Context {
         this.liteMode = liteMode;//liteMode; --TODO: currently only lite mode has been tested and works with 12.1
         this.allowInstantX = allowInstantX;
 
-        //Dash Specific
+        //LifetionCoin Specific
         sporkManager = new SporkManager(this);
 
         masternodePayments = new MasternodePayments(this);
@@ -270,7 +270,7 @@ public class Context {
     }
 
     public void closeDash() {
-        //Dash Specific
+        //LifetionCoin Specific
         close();
         sporkManager = null;
 

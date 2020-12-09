@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Dash Core Group
+ * Copyright 2018 LifetionCoin Core Group
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -227,7 +227,7 @@ public class JNI {
   public final static native int AggregationInfoVector_size(long jarg1, AggregationInfoVector jarg1_);
   public final static native void AggregationInfoVector_removeRange(long jarg1, AggregationInfoVector jarg1_, int jarg2, int jarg3);
   public final static native void delete_AggregationInfoVector(long jarg1);
-  /* Dash Core only
+  /* LifetionCoin Core only
   public final static native long BLS_PrivateKeyShare(long jarg1, byte [] jarg2);
   public final static native long BLS_RecoverPrivateKey(long jarg1, long jarg2);
   public final static native long BLS_PublicKeyShare(long jarg1, byte [] jarg2);

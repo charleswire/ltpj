@@ -404,7 +404,7 @@ public class ScriptTest {
                 valid = false;
             }
 
-            // Dash Core checks this case in CheckTransaction, but we leave it to
+            // LifetionCoin Core checks this case in CheckTransaction, but we leave it to
             // later where we will see an attempt to double-spend, so we explicitly check here
             HashSet<TransactionOutPoint> set = new HashSet<>();
             for (TransactionInput input : transaction.getInputs()) {

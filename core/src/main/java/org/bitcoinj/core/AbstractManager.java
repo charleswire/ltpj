@@ -13,7 +13,7 @@ import static com.google.common.base.Preconditions.checkState;
 /**
  * Created by Hash Engineering on 6/21/2016.
  *
- * Base class for all Dash Manager objects.  Derived classes must implement
+ * Base class for all LifetionCoin Manager objects.  Derived classes must implement
  * {@link #parse()} and {@link #bitcoinSerializeToStream(OutputStream)} to
  * to serialize data to a file with FlatDB.
  */

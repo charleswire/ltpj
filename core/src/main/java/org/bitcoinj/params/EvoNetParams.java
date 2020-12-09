@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Dash Core Group
+ * Copyright 2019 LifetionCoin Core Group
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ public class EvoNetParams extends DevNetParams {
 
     /*
         connection parameters:
-        https://dashplatform.readme.io/docs/tutorial-connecting-to-evonet-dash-core-full-node
+        https://dashplatform.readme.io/docs/tutorial-connecting-to-evonet-lifetioncoin-core-full-node
      */
     public static String DEVNET_NAME = "evonet-8";
     public static String[] MASTERNODES = {
@@ -80,11 +80,11 @@ public class EvoNetParams extends DevNetParams {
         super(DEVNET_NAME, "yQuAu9YAMt4yEiXBeDp3q5bKpo7jsC2eEj", 20001, MASTERNODES, true, 70215);
 
         dnsSeeds = new String[]{
-                "seed-1.evonet.networks.dash.org",
-                "seed-2.evonet.networks.dash.org",
-                "seed-3.evonet.networks.dash.org",
-                "seed-4.evonet.networks.dash.org",
-                "seed-5.evonet.networks.dash.org"
+                "seed-1.evonet.networks.lifetioncoin.org",
+                "seed-2.evonet.networks.lifetioncoin.org",
+                "seed-3.evonet.networks.lifetioncoin.org",
+                "seed-4.evonet.networks.lifetioncoin.org",
+                "seed-5.evonet.networks.lifetioncoin.org"
         };
     }
 

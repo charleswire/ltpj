@@ -162,7 +162,7 @@ public class BLSSignature extends BLSAbstractObject {
         return aggSig.Verify();
     }
 
-    /* Dash Core only
+    /* LifetionCoin Core only
     boolean recover(ArrayList<BLSSignature> sigs, ArrayList<BLSId> ids)
     {
         valid = false;

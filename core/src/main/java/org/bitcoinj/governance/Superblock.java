@@ -216,7 +216,7 @@ public class Superblock extends GovernanceObject {
             try {
                 address = Address.fromBase58(params, vecParsed1.get(i));
             } catch (AddressFormatException x) {
-                String message = "CSuperblock::ParsePaymentSchedule -- Invalid Dash Address : " + vecParsed1.get(i);
+                String message = "CSuperblock::ParsePaymentSchedule -- Invalid LifetionCoin Address : " + vecParsed1.get(i);
                 log.info(message);
                 throw new SuperblockException(message);
             }

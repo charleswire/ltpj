@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Dash Core Group
+ * Copyright 2020 LifetionCoin Core Group
  *
  * Licensed under the MIT license (the "License");
  * you may not use this file except in compliance with the License.

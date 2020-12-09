@@ -101,7 +101,7 @@ public class BLSSecretKey extends BLSAbstractObject
         updateHash();
     }
 
-    /* Dash Core Only
+    /* LifetionCoin Core Only
     boolean secretKeyShare(ArrayList<BLSSecretKey> msk, BLSId id)
     {
         valid = false;

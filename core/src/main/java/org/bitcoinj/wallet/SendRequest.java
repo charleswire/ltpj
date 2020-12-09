@@ -89,13 +89,13 @@ public class SendRequest {
      *
      * <p>This is a dynamic fee (in satoshis) which will be added to the transaction for each kilobyte in size
      * including the first. This is useful as as miners usually sort pending transactions by their fee per unit size
-     * when choosing which transactions to add to a block. Note that, to keep this equivalent to Dash Core
+     * when choosing which transactions to add to a block. Note that, to keep this equivalent to LifetionCoin Core
      * definition, a kilobyte is defined as 1000 bytes, not 1024.</p>
      */
     public Coin feePerKb = Context.get().getFeePerKb();
 
     /**
-     * <p>Requires that there be enough fee for a default Dash Core to at least relay the transaction.
+     * <p>Requires that there be enough fee for a default LifetionCoin Core to at least relay the transaction.
      * (ie ensure the transaction will not be outright rejected by the network). Defaults to true, you should
      * only set this to false if you know what you're doing.</p>
      *
@@ -284,6 +284,6 @@ public class SendRequest {
         return helper.toString();
     }
 
-    //Dash Specific
+    //LifetionCoin Specific
     public boolean useInstantSend;
 }

@@ -30,10 +30,10 @@ public class InventoryItem {
         Transaction,
         Block,
         FilteredBlock,
-        // Dash message types
+        // LifetionCoin message types
         // NOTE: declare non-implmented here, we must keep this enum consistent and backwards compatible
-        TransactionLockRequest, //Dash InstantSend - obsolete
-        TransactionLockVote,         //Dash InstantSend - obsolete
+        TransactionLockRequest, //LifetionCoin InstantSend - obsolete
+        TransactionLockVote,         //LifetionCoin InstantSend - obsolete
         Spork,
         MasternodePaymentVote,
         MasternodePaymentBlock, // reusing, was MasterNodeScanningError
