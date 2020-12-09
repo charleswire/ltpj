@@ -1,4 +1,4 @@
-# configuration for https://travis-ci.org/HashEngineering/ltpj
+# configuration for https://travis-ci.org/lifetioncoin/ltpj
 sudo: false
 dist: trusty
 language: java
