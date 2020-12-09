@@ -19,9 +19,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.dashj</groupId>
-  <artifactId>dashj-parent</artifactId>
-  <version>0.18-SNAPSHOT</version>
+  <groupId>org.ltpj</groupId>
+  <artifactId>ltpj-parent</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -45,9 +45,9 @@
     <url>scm:git:https://github.com/bitcoinj/darkcoinj</url>
   </scm>
 
-  <name>dashj Parent</name>
-  <description>Provides the common configuration for the dashj modules</description>
-  <url>http://dash.org/dashj/</url>
+  <name>ltpj Parent</name>
+  <description>Provides the common configuration for the ltpj modules</description>
+  <url>http://lifetioncoin.org/ltpj/</url>
 
   <licenses>
     <license>
@@ -60,13 +60,13 @@
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/HashEngineering/dashj/issues</url>
+    <url>https://github.com/lifetioncoin/ltpj/issues</url>
   </issueManagement>
 
   <mailingLists>
     <mailingList>
-      <name>darkcoinj Google Group</name>
-      <post>https://groups.google.com/forum/#!forum/darkcoinj</post>
+      <name>ltpj Google Group</name>
+      <post>https://groups.google.com/forum/#!forum/ltpj</post>
     </mailingList>
   </mailingLists>
 
@@ -74,8 +74,8 @@
 
     <repository>
       <id>central</id>
-      <name>dash-Dashj</name>
-      <url>https://api.bintray.com/maven/dash/Dashj/org.dashj/;publish=1</url>
+      <name>dash-LTPj</name>
+      <url>https://api.bintray.com/maven/lifetioncoin/ltpj/org.ltpj/;publish=1</url>
     </repository>
 
     <snapshotRepository>
