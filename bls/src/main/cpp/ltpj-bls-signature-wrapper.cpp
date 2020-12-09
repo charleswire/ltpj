@@ -209,7 +209,7 @@ typedef enum {
   SWIG_JavaIllegalArgumentException,
   SWIG_JavaNullPointerException,
   SWIG_JavaDirectorPureVirtual,
-  DashJ_JavaBLSException,
+  LTPJ_JavaBLSException,
   SWIG_JavaUnknownError
 } SWIG_JavaExceptionCodes;
 
@@ -231,7 +231,7 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
     { SWIG_JavaNullPointerException, "java/lang/NullPointerException" },
     { SWIG_JavaDirectorPureVirtual, "java/lang/RuntimeException" },
     { SWIG_JavaUnknownError,  "java/lang/UnknownError" },
-    { DashJ_JavaBLSException, "org/ltpj/bls/BLSException"},
+    { LTPJ_JavaBLSException, "org/ltpj/bls/BLSException"},
     { (SWIG_JavaExceptionCodes)0,  "java/lang/UnknownError" }
   };
   const SWIG_JavaExceptions_t *except_ptr = java_exceptions;
@@ -664,9 +664,9 @@ SWIGEXPORT void JNICALL Java_org_ltpj_bls_JNI_BLS_1CheckRelicErrors(JNIEnv *jenv
     try {
     bls::BLS::CheckRelicErrors();
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
   } catch (...) {
-      SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+      SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
   }
 }
 
@@ -688,13 +688,13 @@ SWIGEXPORT void JNICALL Java_org_ltpj_bls_JNI_BLS_1SetContextError(JNIEnv *jenv,
   core_get()->code = error;
 }
 
-std::string DASHJ_VERSION = "1.0.0-SNAPSHOT";
+std::string LTPJ_VERSION = "1.0.1-SNAPSHOT";
 
 SWIGEXPORT jstring JNICALL Java_org_ltpj_bls_JNI_BLS_1GetVersionString(JNIEnv *jenv, jclass jcls) {
   (void)jenv;
   (void)jcls;
 
-    jstring jresult = jenv->NewStringUTF(DASHJ_VERSION.c_str());
+    jstring jresult = jenv->NewStringUTF(LTPJ_VERSION.c_str());
 
       if (jresult == NULL) {
           SWIG_JavaThrowException(jenv, SWIG_JavaOutOfMemoryError, "Can't create new byte array");
@@ -702,7 +702,7 @@ SWIGEXPORT jstring JNICALL Java_org_ltpj_bls_JNI_BLS_1GetVersionString(JNIEnv *j
       }
 
       // move from the temp structure to the java structure
-     // jenv->SetByteArrayRegion(jresult, 0, DASHJ_VERSION.size(), (jbyte*)DASHJ_VERSION.c_str());
+     // jenv->SetByteArrayRegion(jresult, 0, LTPJ_VERSION.size(), (jbyte*)LTPJ_VERSION.c_str());
 
     return jresult;
 }
@@ -754,10 +754,10 @@ SWIGEXPORT jlong JNICALL Java_org_ltpj_bls_JNI_ChainCode_1FromBytes(JNIEnv *jenv
   try {
     result = bls::ChainCode::FromBytes((unsigned char const *)arg1);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-      SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+      SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
       return 0;
   }
 
@@ -880,10 +880,10 @@ SWIGEXPORT jlong JNICALL Java_org_ltpj_bls_JNI_ExtendedPrivateKey_1FromBytes(JNI
   try {
     result = bls::ExtendedPrivateKey::FromBytes((unsigned char const *)arg1);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-      SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+      SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
       return 0;
   }
 
@@ -910,10 +910,10 @@ SWIGEXPORT jlong JNICALL Java_org_ltpj_bls_JNI_ExtendedPrivateKey_1PrivateChild(
   try {
     result = ((bls::ExtendedPrivateKey const *)arg1)->PrivateChild(arg2);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-      SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+      SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
       return 0;
   }
 
@@ -936,10 +936,10 @@ SWIGEXPORT jlong JNICALL Java_org_ltpj_bls_JNI_ExtendedPrivateKey_1PublicChild(J
   try {
     result = ((bls::ExtendedPrivateKey const *)arg1)->PublicChild(arg2);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
     return 0;
   }
 
@@ -1149,10 +1149,10 @@ SWIGEXPORT jlong JNICALL Java_org_ltpj_bls_JNI_ExtendedPublicKey_1FromBytes(JNIE
   try {
     result = bls::ExtendedPublicKey::FromBytes((unsigned char const *)arg1);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-      SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+      SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
       return 0;
   }
 
@@ -1179,10 +1179,10 @@ SWIGEXPORT jlong JNICALL Java_org_ltpj_bls_JNI_ExtendedPublicKey_1PublicChild(JN
   try {
     result = ((bls::ExtendedPublicKey const *)arg1)->PublicChild(arg2);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-      SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+      SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
       return 0;
   }
 
@@ -1374,10 +1374,10 @@ SWIGEXPORT jlong JNICALL Java_org_ltpj_bls_JNI_PrivateKey_1FromBytes_1_1SWIG_10(
   try {
     result = bls::PrivateKey::FromBytes((unsigned char const *)arg1,arg2);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-      SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+      SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
       return 0;
   }
 
@@ -1403,10 +1403,10 @@ SWIGEXPORT jlong JNICALL Java_org_ltpj_bls_JNI_PrivateKey_1FromBytes_1_1SWIG_11(
   try {
     result = bls::PrivateKey::FromBytes((unsigned char const *)arg1);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-      SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+      SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
       return 0;
   }
 
@@ -1479,10 +1479,10 @@ SWIGEXPORT jlong JNICALL Java_org_ltpj_bls_JNI_PrivateKey_1AggregateInsecure(JNI
   try {
     result = bls::PrivateKey::AggregateInsecure((std::vector< bls::PrivateKey > const &)*arg1);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-      SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+      SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
       return 0;
   }
 
@@ -1671,10 +1671,10 @@ SWIGEXPORT jlong JNICALL Java_org_ltpj_bls_JNI_PublicKey_1FromBytes(JNIEnv *jenv
   try {
     result = bls::PublicKey::FromBytes((unsigned char const *)arg1);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-      SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+      SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
       return 0;
   }
 
@@ -1842,10 +1842,10 @@ SWIGEXPORT jlong JNICALL Java_org_ltpj_bls_JNI_InsecureSignature_1FromBytes(JNIE
   try {
     result = bls::InsecureSignature::FromBytes((unsigned char const *)arg1);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-      SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+      SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
       return 0;
   }
   *(bls::InsecureSignature **)&jresult = new bls::InsecureSignature((const bls::InsecureSignature &)result); 
@@ -1915,10 +1915,10 @@ SWIGEXPORT jboolean JNICALL Java_org_ltpj_bls_JNI_InsecureSignature_1Verify(JNIE
   try {
     result = (bool)((bls::InsecureSignature const *)arg1)->Verify((std::vector< uint8_t const * > const &)*arg2,(std::vector< bls::PublicKey > const &)*arg3);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown error");
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown error");
     return 0;
   }
   jresult = (jboolean)result;
@@ -1962,10 +1962,10 @@ SWIGEXPORT jlong JNICALL Java_org_ltpj_bls_JNI_InsecureSignature_1DivideBy(JNIEn
   try {
     result = ((bls::InsecureSignature const *)arg1)->DivideBy((std::vector< bls::InsecureSignature > const &)*arg2);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-      SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+      SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
       return 0;
   }
 
@@ -2043,10 +2043,10 @@ SWIGEXPORT jlong JNICALL Java_org_ltpj_bls_JNI_Signature_1FromBytes_1_1SWIG_10(J
   try {
     result = bls::Signature::FromBytes((unsigned char const *)arg1);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
     return 0;
   }
   *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result);
@@ -2077,10 +2077,10 @@ SWIGEXPORT jlong JNICALL Java_org_ltpj_bls_JNI_Signature_1FromBytes_1_1SWIG_11(J
   try {
     result = bls::Signature::FromBytes((unsigned char const *)arg1,(AggregationInfo const &)*arg2);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-      SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+      SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
       return 0;
   }
 
@@ -2202,10 +2202,10 @@ SWIGEXPORT jboolean JNICALL Java_org_ltpj_bls_JNI_Signature_1Verify(JNIEnv *jenv
   try {
     result = (bool)((bls::Signature const *)arg1)->Verify();
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown error");
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown error");
     return 0;
   }
   jresult = (jboolean)result;
@@ -2228,10 +2228,10 @@ SWIGEXPORT jlong JNICALL Java_org_ltpj_bls_JNI_Signature_1AggregateSigs(JNIEnv *
   try {
     result = bls::Signature::AggregateSigs((std::vector< bls::Signature > const &)*arg1);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-      SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+      SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
       return 0;
   }
 
@@ -2258,10 +2258,10 @@ SWIGEXPORT jlong JNICALL Java_org_ltpj_bls_JNI_Signature_1DivideBy(JNIEnv *jenv,
   try {
     result = ((bls::Signature const *)arg1)->DivideBy((std::vector< bls::Signature > const &)*arg2);
   } catch (std::string & x) {
-    SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, x.c_str());
+    SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, x.c_str());
     return 0;
   } catch (...) {
-      SWIG_JavaThrowException(jenv, DashJ_JavaBLSException, "unknown exception");
+      SWIG_JavaThrowException(jenv, LTPJ_JavaBLSException, "unknown exception");
       return 0;
   }
 

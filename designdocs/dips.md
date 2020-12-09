@@ -1,4 +1,4 @@
-#DIP's in DashJ
+#DIP's in LTPJ
 The following DIPs are supported by ltpj
 
 DIP0001 - Initial Scaling of the Network

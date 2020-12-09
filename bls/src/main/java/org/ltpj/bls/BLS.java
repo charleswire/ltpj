@@ -25,7 +25,7 @@ public class BLS {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
-  public static final String DASHJ_VERSION = "1.0.0-SNAPSHOT";
+  public static final String LTPJ_VERSION = "1.0.1-SNAPSHOT";
 
 
   static {
@@ -33,9 +33,9 @@ public class BLS {
     try
     {
       System.loadLibrary(JNI.LIBRARY_NAME);
-      Preconditions.checkState(GetVersionString().equals(DASHJ_VERSION),
+      Preconditions.checkState(GetVersionString().equals(LTPJ_VERSION),
               "ltpjbls:  C++ Source Version doesn't match Java Source version:" +
-              "C++: " + GetVersionString() + " Java: " + DASHJ_VERSION);
+              "C++: " + GetVersionString() + " Java: " + LTPJ_VERSION);
       isLibraryLoaded = true;
     } catch(UnsatisfiedLinkError x) {
       throw new RuntimeException(x.getMessage());
