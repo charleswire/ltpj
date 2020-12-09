@@ -51,7 +51,7 @@ public class BitcoindComparisonTool {
 
     public static void main(String[] args) throws Exception {
         BriefLogFormatter.init();
-        System.out.println("USAGE: dashjBlockStoreLocation runExpensiveTests(1/0) [port=18444]");
+        System.out.println("USAGE: ltpjBlockStoreLocation runExpensiveTests(1/0) [port=18444]");
         boolean runExpensiveTests = args.length > 1 && Integer.parseInt(args[1]) == 1;
 
         Context ctx = new Context(PARAMS);
